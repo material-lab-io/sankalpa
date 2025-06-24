@@ -1,5 +1,6 @@
 import { MapPin, Star, Users } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface TempleCardProps {
   name: string
@@ -8,6 +9,8 @@ interface TempleCardProps {
   followers: number
   image: string
   deity?: string
+  featured?: boolean
+  link?: string
 }
 
 export default function TempleCard({ 
@@ -16,10 +19,12 @@ export default function TempleCard({
   rating, 
   followers, 
   image,
-  deity 
+  deity,
+  featured,
+  link 
 }: TempleCardProps) {
-  return (
-    <div className="bg-white rounded-2xl overflow-hidden card-shadow card-shadow-hover transition-all duration-300 animate-fade-in">
+  const CardContent = () => (
+    <div className={`bg-white rounded-2xl overflow-hidden card-shadow card-shadow-hover transition-all duration-300 animate-fade-in ${featured ? 'ring-2 ring-yellow-400' : ''}`}>
       <div className="relative h-48 bg-gradient-to-br from-sankalpa-light to-sankalpa-accent">
         <Image
           src={image}
@@ -32,6 +37,12 @@ export default function TempleCard({
         {deity && (
           <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-xs font-medium px-3 py-1 rounded-full">
             {deity}
+          </span>
+        )}
+        {featured && (
+          <span className="absolute top-3 right-3 bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+            <Star size={12} className="fill-current" />
+            FEATURED
           </span>
         )}
       </div>
@@ -58,4 +69,10 @@ export default function TempleCard({
       </div>
     </div>
   )
+
+  if (link) {
+    return <Link href={link}>{CardContent()}</Link>
+  }
+
+  return CardContent()
 }

@@ -1,0 +1,4 @@
+Temple images will be placed here:
+- main.jpg: Main temple facade/gopuram image
+- deity.jpg: Main deity image
+- gallery/: Additional temple photos

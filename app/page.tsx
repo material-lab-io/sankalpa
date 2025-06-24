@@ -1,8 +1,19 @@
-import { Search, TrendingUp, Calendar, Sparkles } from 'lucide-react'
+import { Search, TrendingUp, Calendar, Sparkles, Star } from 'lucide-react'
 import TempleCard from '@/components/TempleCard'
 import ServiceCard from '@/components/ServiceCard'
+import Link from 'next/link'
 
 const featuredTemples = [
+  { 
+    name: 'Calgary Sridevi Karumari Amman Temple', 
+    location: 'Calgary, AB', 
+    rating: 4.9, 
+    followers: 5200,
+    image: '/temples/karumari/main.jpg',
+    deity: 'Goddess Karumari Amman',
+    featured: true,
+    link: '/temples/karumari'
+  },
   { 
     name: 'Sri Venkateswara Temple', 
     location: 'Tirupati', 
@@ -71,8 +82,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Temple Section */}
+      <section className="px-4 mt-6">
+        <Link href="/temples/karumari" className="block">
+          <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-2xl p-4 relative overflow-hidden">
+            <div className="absolute top-2 right-2 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+              <Star size={14} className="fill-current" />
+              FEATURED
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-20 h-20 bg-gradient-to-br from-sankalpa-primary to-sankalpa-secondary rounded-xl flex items-center justify-center text-white text-2xl font-bold">
+                కరు
+              </div>
+              <div className="flex-1">
+                <h3 className="font-bold text-lg text-gray-900">Calgary Sridevi Karumari Amman Temple</h3>
+                <p className="text-sm text-gray-600 mt-1">First temple partner on Sankalpa</p>
+                <p className="text-xs text-sankalpa-primary mt-2 font-medium">Explore temple services →</p>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </section>
+
       {/* Quick Actions */}
-      <section className="px-4 -mt-6 relative z-20">
+      <section className="px-4 mt-6">
         <div className="grid grid-cols-4 gap-3">
           {[
             { icon: '🛕', label: 'Temples' },
