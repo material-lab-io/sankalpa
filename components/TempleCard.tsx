@@ -11,6 +11,7 @@ interface TempleCardProps {
   deity?: string
   featured?: boolean
   link?: string
+  compact?: boolean
 }
 
 export default function TempleCard({ 
@@ -21,11 +22,33 @@ export default function TempleCard({
   image,
   deity,
   featured,
-  link 
+  link,
+  compact = false
 }: TempleCardProps) {
-  const CardContent = () => (
-    <div className={`bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-fade-in border border-sankalpa-gold/10 ${featured ? 'ring-2 ring-sankalpa-gold' : ''}`}>
-      <div className="relative h-48 bg-gradient-to-br from-sankalpa-cream-light to-sankalpa-light">
+  const CardContent = () => {
+    if (compact) {
+      // Netflix-style compact card
+      return (
+        <div className="cursor-pointer">
+          <div className="relative aspect-[3/4] rounded-lg overflow-hidden mb-2">
+            <TempleImage
+              src={image}
+              alt={name}
+              className="object-cover hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-2 left-2 right-2">
+              <p className="text-white text-xs font-medium truncate">{name}</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
+    
+    // Regular card
+    return (
+      <div className={`bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-fade-in border border-sankalpa-gold/10 ${featured ? 'ring-2 ring-sankalpa-gold' : ''}`}>
+        <div className="relative h-48 bg-gradient-to-br from-sankalpa-cream-light to-sankalpa-light">
         <TempleImage
           src={image}
           alt={name}
@@ -64,9 +87,10 @@ export default function TempleCard({
             <span>{followers > 1000 ? `${(followers/1000).toFixed(1)}k` : followers} devotees</span>
           </div>
         </div>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 
   if (link) {
     return <Link href={link}>{CardContent()}</Link>

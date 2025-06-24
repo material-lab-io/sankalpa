@@ -1,6 +1,7 @@
-import { Search, TrendingUp, Calendar, Sparkles, Star } from 'lucide-react'
+import { Search, TrendingUp, Calendar, Sparkles, Star, ChevronRight } from 'lucide-react'
 import TempleCard from '@/components/TempleCard'
 import ServiceCard from '@/components/ServiceCard'
+import TempleImage from '@/components/TempleImage'
 import Link from 'next/link'
 
 const featuredTemples = [
@@ -52,156 +53,143 @@ const popularServices = [
 export default function Home() {
   return (
     <div className="animate-fade-in">
-      {/* Hero Section */}
-      <section className="relative h-56 bg-gradient-to-br from-sankalpa-cream-light via-sankalpa-light to-sankalpa-gold-light overflow-hidden">
-        {/* Kolam pattern overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-            <pattern id="kolam" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <circle cx="10" cy="10" r="2" fill="currentColor" className="text-sankalpa-gold-dark" />
-              <path d="M10,5 L15,10 L10,15 L5,10 Z" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-sankalpa-gold-dark" />
-            </pattern>
-            <rect width="100" height="100" fill="url(#kolam)" />
-          </svg>
-        </div>
-        
-        <div className="relative z-10 h-full flex flex-col justify-center px-4 max-w-4xl mx-auto">
-          <div className="text-center">
-            <p className="text-sm text-sankalpa-dark/70 mb-1">
-              {new Date().getHours() < 12 ? 'Good Morning' : new Date().getHours() < 17 ? 'Good Afternoon' : 'Good Evening'}
-            </p>
-            <h1 className="text-3xl font-serif text-sankalpa-dark mb-2">
-              Welcome back, <span className="text-sankalpa-gold">Devotee</span>
-            </h1>
-            <p className="text-sankalpa-dark/80 text-sm mb-1 italic">
-              May peace and prosperity be with you
-            </p>
-          </div>
-          
-          {/* Search Bar */}
-          <div className="relative mt-6 max-w-md mx-auto w-full">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-sankalpa-dark/60" size={18} />
-            <input
-              type="text"
-              placeholder="Search temples, services..."
-              className="w-full pl-10 pr-4 py-2.5 rounded-full bg-white/80 backdrop-blur-sm placeholder-sankalpa-dark/50 focus:outline-none focus:ring-2 focus:ring-sankalpa-gold/30 text-sm"
-            />
-          </div>
-        </div>
-        
-        {/* Temple border pattern */}
-        <div className="absolute -bottom-1 left-0 right-0">
-          <svg viewBox="0 0 1200 60" preserveAspectRatio="none" className="w-full h-8">
-            <path d="M0,30 Q30,0 60,30 T120,30 T180,30 T240,30 T300,30 T360,30 T420,30 T480,30 T540,30 T600,30 T660,30 T720,30 T780,30 T840,30 T900,30 T960,30 T1020,30 T1080,30 T1140,30 T1200,30 L1200,60 L0,60 Z" 
-                  fill="white" className="fill-sankalpa-bg" />
-          </svg>
+      {/* Search Bar - Netflix style top */}
+      <section className="px-4 pt-20 pb-3 bg-sankalpa-bg">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-sankalpa-dark/60" size={16} />
+          <input
+            type="text"
+            placeholder="Search temples, services..."
+            className="w-full pl-9 pr-4 py-2 rounded-lg bg-sankalpa-cream-light placeholder-sankalpa-dark/50 focus:outline-none focus:ring-2 focus:ring-sankalpa-gold/30 text-sm"
+          />
         </div>
       </section>
 
-      {/* Featured Temple Section */}
-      <section className="px-4 mt-6">
+      {/* Featured Temple Section - Netflix Hero Style */}
+      <section className="relative -mt-3">
         <Link href="/temples/karumari" className="block">
-          <div className="bg-gradient-to-r from-sankalpa-gold-light/20 to-sankalpa-cream-light border border-sankalpa-gold/20 rounded-3xl p-5 relative overflow-hidden shadow-sm hover:shadow-md transition-all">
-            <div className="absolute top-3 right-3 bg-sankalpa-gold text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
-              <Star size={12} className="fill-current" />
-              FEATURED
+          <div className="relative h-[420px] overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0">
+              <TempleImage
+                src="/temples/karumari/hero.jpg"
+                alt="Sri Devi Karumariamma Temple"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
             </div>
-            <div className="flex items-center gap-4">
-              <div className="w-20 h-20 bg-gradient-to-br from-sankalpa-gold to-sankalpa-gold-dark rounded-full flex items-center justify-center text-white shadow-lg">
-                <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M12 2L3 7V11C3 16 6.5 20.7 12 22C17.5 20.7 21 16 21 11V7L12 2Z" />
-                  <path d="M12 6L8 8.5V10.5C8 13 9.5 15.3 12 16C14.5 15.3 16 13 16 10.5V8.5L12 6Z" />
-                </svg>
+            
+            {/* Content */}
+            <div className="absolute bottom-0 left-0 right-0 p-4 pb-6">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="bg-sankalpa-gold text-white px-3 py-1 rounded text-xs font-bold">FEATURED</span>
+                <span className="text-white/80 text-xs">Temple of the Month</span>
               </div>
-              <div className="flex-1">
-                <h3 className="font-serif text-xl text-sankalpa-dark">Sri Devi Karumariamma Temple</h3>
-                <p className="text-sm text-sankalpa-dark/70 mt-1">RR Nagar, Bengaluru</p>
-                <p className="text-xs text-sankalpa-gold font-medium mt-2 flex items-center gap-1">
-                  <span>Explore divine services</span>
-                  <span className="text-lg">→</span>
-                </p>
+              
+              <h2 className="text-3xl font-serif text-white mb-2">Sri Devi Karumariamma Temple</h2>
+              <p className="text-white/80 text-sm mb-4">RR Nagar, Bengaluru • 5.2K Devotees</p>
+              
+              <div className="flex items-center gap-3">
+                <button className="bg-white text-sankalpa-dark px-6 py-2.5 rounded-full font-medium text-sm flex items-center gap-2 hover:bg-white/90 transition-colors">
+                  <span>Visit Temple</span>
+                </button>
+                <button className="bg-white/20 backdrop-blur-sm text-white px-6 py-2.5 rounded-full font-medium text-sm border border-white/30 hover:bg-white/30 transition-colors">
+                  More Info
+                </button>
+              </div>
+              
+              {/* Quick Info Pills */}
+              <div className="flex gap-2 mt-4 flex-wrap">
+                <span className="text-xs text-white/70 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">Daily Poojas</span>
+                <span className="text-xs text-white/70 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">Hall Booking</span>
+                <span className="text-xs text-white/70 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">Live Darshan</span>
               </div>
             </div>
           </div>
         </Link>
       </section>
 
-      {/* Quick Actions */}
-      <section className="px-4 mt-8">
-        <div className="grid grid-cols-4 gap-3">
+      {/* Quick Actions - Netflix style compact */}
+      <section className="px-4 mt-6">
+        <div className="flex gap-2 overflow-x-auto scrollbar-hide">
           {[
             { icon: '🛕', label: 'Temples' },
             { icon: '🪔', label: 'Poojas' },
             { icon: '🎊', label: 'Events' },
             { icon: '🙏', label: 'Donate' },
+            { icon: '📿', label: 'Rituals' },
+            { icon: '🎯', label: 'Bookings' },
           ].map((item) => (
             <button
               key={item.label}
-              className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md active:scale-95 transition-all border border-sankalpa-gold/10 group"
+              className="flex flex-col items-center min-w-[72px] py-3 px-2 bg-sankalpa-cream-light rounded-xl hover:bg-sankalpa-light transition-colors"
             >
-              <div className="text-2xl mb-1 group-hover:animate-float">{item.icon}</div>
-              <span className="text-xs text-sankalpa-dark font-medium">{item.label}</span>
+              <div className="text-xl mb-1">{item.icon}</div>
+              <span className="text-[11px] text-sankalpa-dark font-medium">{item.label}</span>
             </button>
           ))}
         </div>
       </section>
 
-      {/* Trending Section */}
-      <section className="px-4 mt-8">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold text-gray-900 flex items-center">
-            <TrendingUp size={20} className="mr-2 text-sankalpa-primary" />
+      {/* Trending Section - Netflix style */}
+      <section className="mt-6">
+        <div className="flex items-center justify-between mb-3 px-4">
+          <h2 className="text-base font-semibold text-sankalpa-dark">
             Trending Temples
           </h2>
-          <button className="text-sm text-sankalpa-primary font-medium">
-            View all
-          </button>
+          <ChevronRight size={20} className="text-sankalpa-dark/60" />
         </div>
         
-        <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-2">
+        <div className="flex gap-2 pl-4 overflow-x-auto scrollbar-hide">
           {featuredTemples.map((temple) => (
-            <div key={temple.name} className="min-w-[280px] animate-slide-up">
-              <TempleCard {...temple} />
+            <div key={temple.name} className="min-w-[120px] animate-slide-up">
+              <TempleCard {...temple} compact />
             </div>
           ))}
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="px-4 mt-8 mb-4">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold text-gray-900 flex items-center">
-            <Sparkles size={20} className="mr-2 text-sankalpa-primary" />
+      {/* Services Section - Netflix style */}
+      <section className="mt-6">
+        <div className="flex items-center justify-between mb-3 px-4">
+          <h2 className="text-base font-semibold text-sankalpa-dark">
             Popular Services
           </h2>
-          <button className="text-sm text-sankalpa-primary font-medium">
-            Browse all
-          </button>
+          <ChevronRight size={20} className="text-sankalpa-dark/60" />
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="flex gap-3 pl-4 overflow-x-auto scrollbar-hide pb-4">
           {popularServices.map((service, index) => (
-            <div key={service.title} className="animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
-              <ServiceCard {...service} />
+            <div key={service.title} className="min-w-[160px] animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
+              <ServiceCard {...service} compact />
             </div>
           ))}
         </div>
       </section>
 
-      {/* Upcoming Events Banner */}
-      <section className="px-4 mt-8 mb-8">
-        <div className="bg-gradient-to-r from-sankalpa-primary to-sankalpa-secondary rounded-2xl p-6 text-white">
-          <div className="flex items-start justify-between">
-            <div>
-              <h3 className="font-bold text-lg mb-1">Karthika Deepam</h3>
-              <p className="text-white/80 text-sm mb-3">
-                Join thousands of devotees for this auspicious festival
+      {/* Upcoming Events - Netflix style banner */}
+      <section className="mt-6 mb-20">
+        <div className="flex items-center justify-between mb-3 px-4">
+          <h2 className="text-base font-semibold text-sankalpa-dark">
+            Upcoming Events
+          </h2>
+          <ChevronRight size={20} className="text-sankalpa-dark/60" />
+        </div>
+        
+        <div className="px-4">
+          <div className="bg-gradient-to-r from-sankalpa-gold to-sankalpa-gold-dark rounded-xl p-4 relative overflow-hidden">
+            <div className="absolute top-0 right-0 opacity-10">
+              <Calendar size={80} />
+            </div>
+            <div className="relative z-10">
+              <h3 className="font-semibold text-white mb-1">Karthika Deepam Festival</h3>
+              <p className="text-white/80 text-xs mb-3">
+                Nov 15, 2024 • Multiple temples participating
               </p>
-              <button className="bg-white text-sankalpa-primary px-4 py-2 rounded-lg font-medium text-sm">
-                Learn More
+              <button className="bg-white/20 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-xs font-medium border border-white/30">
+                Set Reminder
               </button>
             </div>
-            <Calendar className="text-white/80" size={32} />
           </div>
         </div>
       </section>
