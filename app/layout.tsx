@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} font-sans bg-sankalpa-bg`}>
         <Header />
-        <main className="pt-14 pb-20 md:pb-0 min-h-screen">
+        <main className="pt-0 pb-20 md:pb-0 min-h-screen">
           {children}
         </main>
         <BottomNav />

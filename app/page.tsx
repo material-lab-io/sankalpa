@@ -69,22 +69,10 @@ const popularServices = [
 export default function Home() {
   return (
     <div className="animate-fade-in">
-      {/* Search Bar - Netflix style top */}
-      <section className="px-4 pt-20 pb-3 bg-sankalpa-bg">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-sankalpa-dark/60" size={16} />
-          <input
-            type="text"
-            placeholder="Search temples, services..."
-            className="w-full pl-9 pr-4 py-2 rounded-lg bg-sankalpa-cream-light placeholder-sankalpa-dark/50 focus:outline-none focus:ring-2 focus:ring-sankalpa-gold/30 text-sm"
-          />
-        </div>
-      </section>
-
       {/* Featured Temple Section - Netflix Hero Style */}
-      <section className="relative -mt-3">
+      <section className="relative">
         <Link href="/temples/karumari" className="block">
-          <div className="relative h-[420px] overflow-hidden">
+          <div className="relative h-[480px] overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
               <TempleImage
@@ -93,6 +81,18 @@ export default function Home() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+            </div>
+            
+            {/* Search Bar Overlay */}
+            <div className="absolute top-20 left-0 right-0 px-4 z-20">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/70" size={16} />
+                <input
+                  type="text"
+                  placeholder="Search temples, services..."
+                  className="w-full pl-9 pr-4 py-2.5 rounded-full bg-white/20 backdrop-blur-sm placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white/30 text-sm border border-white/30"
+                />
+              </div>
             </div>
             
             {/* Content */}
