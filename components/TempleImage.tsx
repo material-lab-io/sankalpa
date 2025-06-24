@@ -11,11 +11,16 @@ interface TempleImageProps {
 
 export default function TempleImage({ src, alt, className = '' }: TempleImageProps) {
   const [error, setError] = useState(false)
-  const fallbackSrc = '/images/temple-fallback.svg'
+  
+  // Use fallback with base path for GitHub Pages
+  const fallbackSrc = '/sankalpa/images/temple-fallback.svg'
+  
+  // Use fallback for local paths that don't exist or on error
+  const imageSrc = (src.startsWith('/temples/') || error) ? fallbackSrc : src
   
   return (
     <Image
-      src={error ? fallbackSrc : src}
+      src={imageSrc}
       alt={alt}
       fill
       className={className}

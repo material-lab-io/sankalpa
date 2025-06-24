@@ -10,7 +10,7 @@ const featuredTemples = [
     location: 'RR Nagar, Bengaluru', 
     rating: 4.9, 
     followers: 5200,
-    image: '/temples/karumari/main.jpg',
+    image: 'https://images.unsplash.com/photo-1544588440-fc7551331160?w=400&h=600&fit=crop',
     deity: 'Sri Devi Karumariamma',
     featured: true,
     link: '/temples/karumari'
@@ -20,7 +20,7 @@ const featuredTemples = [
     location: 'Tirupati', 
     rating: 4.9, 
     followers: 15200,
-    image: 'https://images.unsplash.com/photo-1621940532789-97536328d9b5?w=400',
+    image: 'https://images.unsplash.com/photo-1621940532789-97536328d9b5?w=400&h=600&fit=crop',
     deity: 'Lord Venkateswara'
   },
   { 
@@ -28,9 +28,25 @@ const featuredTemples = [
     location: 'Madurai', 
     rating: 4.8, 
     followers: 12500,
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400',
+    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400&h=600&fit=crop',
     deity: 'Goddess Meenakshi'
   },
+  {
+    name: 'Golden Temple',
+    location: 'Vellore',
+    rating: 4.7,
+    followers: 8900,
+    image: 'https://images.unsplash.com/photo-1609947017287-d6b32d646711?w=400&h=600&fit=crop',
+    deity: 'Goddess Lakshmi'
+  },
+  {
+    name: 'Kapaleeshwarar Temple',
+    location: 'Chennai',
+    rating: 4.8,
+    followers: 10200,
+    image: 'https://images.unsplash.com/photo-1519817650390-64a93db51149?w=400&h=600&fit=crop',
+    deity: 'Lord Shiva'
+  }
 ]
 
 const popularServices = [
@@ -72,7 +88,7 @@ export default function Home() {
             {/* Background Image */}
             <div className="absolute inset-0">
               <TempleImage
-                src="/temples/karumari/hero.jpg"
+                src="https://images.unsplash.com/photo-1544588440-fc7551331160?w=800&h=600&fit=crop"
                 alt="Sri Devi Karumariamma Temple"
                 className="object-cover"
               />

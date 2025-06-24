@@ -35,7 +35,7 @@ export default function KarumariTemplePage() {
       <div className="relative h-64 md:h-96">
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
         <TempleImage
-          src="/temples/karumari/main.jpg"
+          src="https://images.unsplash.com/photo-1544588440-fc7551331160?w=1200&h=800&fit=crop"
           alt="Sri Devi Karumariamma Temple"
           className="object-cover"
         />
