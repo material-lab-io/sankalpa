@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Header from '@/components/Header'
+import BottomNav from '@/components/BottomNav'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -9,7 +11,11 @@ export const metadata: Metadata = {
   description: 'A platform connecting devotees with temples',
 }
 
-import Header from '@/components/Header'
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+}
 
 export default function RootLayout({
   children,
@@ -18,9 +24,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-sankalpa-bg`}>
         <Header />
-        {children}
+        <main className="pt-14 pb-20 md:pb-0 min-h-screen">
+          {children}
+        </main>
+        <BottomNav />
       </body>
     </html>
   )
