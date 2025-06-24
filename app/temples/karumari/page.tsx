@@ -1,10 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, Clock, MapPin, Phone, Mail, Globe, ArrowLeft, Heart, Share2, Users } from 'lucide-react'
 import BottomNav from '@/components/BottomNav'
+import TempleImage from '@/components/TempleImage'
 
 export default function KarumariTemplePage() {
   const [isFollowing, setIsFollowing] = useState(false)
@@ -34,12 +34,10 @@ export default function KarumariTemplePage() {
 
       <div className="relative h-64 md:h-96">
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
-        <Image
+        <TempleImage
           src="/temples/karumari/main.jpg"
           alt="Sri Devi Karumariamma Temple"
-          fill
           className="object-cover"
-          priority
         />
         <div className="absolute bottom-0 left-0 right-0 p-6 z-20 text-white">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">Sri Devi Karumariamma Temple</h1>
@@ -83,10 +81,13 @@ export default function KarumariTemplePage() {
               </p>
               <div className="bg-sankalpa-secondary/10 p-4 rounded-lg mb-4">
                 <p className="text-sankalpa-primary font-semibold text-center text-lg">
-                  &ldquo;காத்திடுவாள் ஆத்தாள் காற்றாகி&rdquo;
+                  &ldquo;ಕರುಮಾರಿ ತಾಯಿ ಕಾಪಾಡುತ್ತಾಳೆ&rdquo;
                 </p>
-                <p className="text-center text-gray-600 mt-1">
-                  &ldquo;Goddess Karumari protects us as the wind&rdquo;
+                <p className="text-center text-sankalpa-dark/70 text-sm mt-2">
+                  ಕನ್ನಡ • தமிழ் • తెలుగు
+                </p>
+                <p className="text-center text-gray-600 mt-1 text-sm">
+                  &ldquo;Mother Karumari protects us&rdquo;
                 </p>
               </div>
             </div>

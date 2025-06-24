@@ -1,6 +1,6 @@
 import { MapPin, Star, Users } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
+import TempleImage from './TempleImage'
 
 interface TempleCardProps {
   name: string
@@ -26,12 +26,10 @@ export default function TempleCard({
   const CardContent = () => (
     <div className={`bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-fade-in border border-sankalpa-gold/10 ${featured ? 'ring-2 ring-sankalpa-gold' : ''}`}>
       <div className="relative h-48 bg-gradient-to-br from-sankalpa-cream-light to-sankalpa-light">
-        <Image
+        <TempleImage
           src={image}
           alt={name}
-          fill
           className="object-cover"
-          unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
         {deity && (
