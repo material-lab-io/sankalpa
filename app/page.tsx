@@ -5,12 +5,12 @@ import Link from 'next/link'
 
 const featuredTemples = [
   { 
-    name: 'Calgary Sridevi Karumari Amman Temple', 
-    location: 'Calgary, AB', 
+    name: 'Sri Devi Karumariamma Temple', 
+    location: 'RR Nagar, Bengaluru', 
     rating: 4.9, 
     followers: 5200,
     image: '/temples/karumari/main.jpg',
-    deity: 'Goddess Karumari Amman',
+    deity: 'Sri Devi Karumariamma',
     featured: true,
     link: '/temples/karumari'
   },
@@ -95,8 +95,8 @@ export default function Home() {
                 కరు
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-lg text-gray-900">Calgary Sridevi Karumari Amman Temple</h3>
-                <p className="text-sm text-gray-600 mt-1">First temple partner on Sankalpa</p>
+                <h3 className="font-bold text-lg text-gray-900">Sri Devi Karumariamma Temple</h3>
+                <p className="text-sm text-gray-600 mt-1">RR Nagar, Bengaluru | First temple partner on Sankalpa</p>
                 <p className="text-xs text-sankalpa-primary mt-2 font-medium">Explore temple services →</p>
               </div>
             </div>

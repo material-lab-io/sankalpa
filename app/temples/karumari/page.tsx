@@ -36,17 +36,17 @@ export default function KarumariTemplePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
         <Image
           src="/temples/karumari/main.jpg"
-          alt="Calgary Sridevi Karumari Amman Hindu Temple"
+          alt="Sri Devi Karumariamma Temple"
           fill
           className="object-cover"
           priority
         />
         <div className="absolute bottom-0 left-0 right-0 p-6 z-20 text-white">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">Calgary Sridevi Karumari Amman Temple</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">Sri Devi Karumariamma Temple</h1>
           <div className="flex items-center gap-4 text-sm">
             <span className="flex items-center gap-1">
               <MapPin className="h-4 w-4" />
-              Calgary, AB
+              RR Nagar, Bengaluru
             </span>
             <span className="flex items-center gap-1">
               <Users className="h-4 w-4" />
@@ -78,8 +78,8 @@ export default function KarumariTemplePage() {
             <div className="bg-white rounded-lg shadow-sm p-6">
               <h2 className="text-2xl font-bold mb-4 text-sankalpa-primary">About the Temple</h2>
               <p className="text-gray-700 mb-4">
-                The Calgary Sridevi Karumari Amman Hindu Temple is a sacred place of worship dedicated to Goddess Karumari Amman. 
-                Established in 2007, the temple serves as a spiritual and cultural center for the Hindu community in Calgary and surrounding areas.
+                Sri Devi Karumariamma Temple is a sacred place of worship located in Raja Rajeshwari Nagar (RR Nagar), Bengaluru. 
+                The temple is dedicated to Goddess Karumariamma and serves as a spiritual center for devotees in Bengaluru and surrounding areas.
               </p>
               <div className="bg-sankalpa-secondary/10 p-4 rounded-lg mb-4">
                 <p className="text-sankalpa-primary font-semibold text-center text-lg">
@@ -96,22 +96,42 @@ export default function KarumariTemplePage() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-sankalpa-primary" />
-                  <span>55 Westwinds Crescent NE, Calgary, AB T3J 5H2</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-sankalpa-primary" />
-                  <a href="tel:+14035909988" className="text-sankalpa-primary hover:underline">(403) 590-9988</a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-sankalpa-primary" />
-                  <a href="mailto:karumari2007@yahoo.ca" className="text-sankalpa-primary hover:underline">karumari2007@yahoo.ca</a>
+                  <span>Sri Devi Karumariamman Temple, Raja Rajeshwari Nagar, Bangalore-560098</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Globe className="h-5 w-5 text-sankalpa-primary" />
-                  <a href="https://www.karumariamman.ca" target="_blank" rel="noopener noreferrer" className="text-sankalpa-primary hover:underline">
-                    www.karumariamman.ca
+                  <a href="https://www.karumari.org" target="_blank" rel="noopener noreferrer" className="text-sankalpa-primary hover:underline">
+                    www.karumari.org
                   </a>
                 </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <h3 className="text-xl font-semibold mb-4">Social Media</h3>
+              <div className="space-y-3">
+                <a href="https://www.instagram.com/srikarumariammantemple/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-700 hover:text-sankalpa-primary">
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                  </svg>
+                  <span>@srikarumariammantemple</span>
+                </a>
+                <a href="https://www.facebook.com/KarumariammanTempleRRnagar" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-700 hover:text-sankalpa-primary">
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                  <span>KarumariammanTempleRRnagar</span>
+                </a>
+                <a href="https://www.youtube.com/@srisheethalakrishnamaarite3584" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-700 hover:text-sankalpa-primary">
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  <span>Sri Sheethala Krishnamaari Temple</span>
+                </a>
+                <a href="https://g.co/kgs/TziJSR" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-700 hover:text-sankalpa-primary">
+                  <MapPin className="h-5 w-5" />
+                  <span>View on Google Maps</span>
+                </a>
               </div>
             </div>
 
@@ -119,25 +139,21 @@ export default function KarumariTemplePage() {
               <h3 className="text-xl font-semibold mb-4">Temple Timings</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="border rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">Morning Hours</h4>
-                  <p className="flex items-center gap-2 text-gray-700">
-                    <Clock className="h-4 w-4" />
-                    9:00 AM - 1:30 PM
+                  <h4 className="font-semibold mb-2">Daily Timings</h4>
+                  <p className="text-gray-700 text-sm">
+                    The temple is open for devotees throughout the week with regular poojas and alankaras.
                   </p>
-                  <p className="text-sm text-gray-600 mt-1">Aarthi/Pooja: 10:00 AM & 12:00 PM</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">Evening Hours</h4>
-                  <p className="flex items-center gap-2 text-gray-700">
-                    <Clock className="h-4 w-4" />
-                    5:30 PM - 8:30 PM
+                  <h4 className="font-semibold mb-2">Special Programs</h4>
+                  <p className="text-gray-700 text-sm">
+                    Special poojas, abhishekas, and annaprasadham are conducted on auspicious days.
                   </p>
-                  <p className="text-sm text-gray-600 mt-1">Aarthi/Pooja: 7:00 PM</p>
                 </div>
               </div>
               <div className="mt-4 p-4 bg-yellow-50 rounded-lg">
                 <p className="text-sm text-yellow-800">
-                  <strong>Special:</strong> Rahu Kaala Pooja every Tuesday
+                  <strong>Note:</strong> Please contact the temple directly for specific timings and special event schedules.
                 </p>
               </div>
             </div>
@@ -149,38 +165,36 @@ export default function KarumariTemplePage() {
             <div className="bg-white rounded-lg shadow-sm p-6">
               <h2 className="text-2xl font-bold mb-4 text-sankalpa-primary">Temple History</h2>
               <div className="space-y-4">
+                <p className="text-gray-700 mb-4">
+                  Sri Devi Karumariamma Temple in Raja Rajeshwari Nagar (RR Nagar) is a revered spiritual center in Bengaluru. 
+                  The temple has been serving devotees for many years and has become an integral part of the local community&apos;s 
+                  spiritual and cultural life.
+                </p>
                 <div className="border-l-4 border-sankalpa-primary pl-4">
-                  <h3 className="font-semibold text-lg">2007 - Foundation</h3>
+                  <h3 className="font-semibold text-lg">Active Temple Community</h3>
                   <p className="text-gray-700">
-                    The Calgary Sridevi Karumari Amman Hindu Temple was established in Calgary City, coinciding with the auspicious Chithra New Year. 
-                    This marked the beginning of a new spiritual center for the Hindu community in Calgary.
-                  </p>
-                </div>
-                <div className="border-l-4 border-sankalpa-primary pl-4">
-                  <h3 className="font-semibold text-lg">2020 - Reconstruction & Expansion</h3>
-                  <p className="text-gray-700">
-                    The temple underwent major reconstruction, adding more idols including the powerful Navashakthi. 
-                    This expansion allowed the temple to serve more devotees and offer a wider range of spiritual services.
-                  </p>
-                </div>
-                <div className="border-l-4 border-sankalpa-primary pl-4">
-                  <h3 className="font-semibold text-lg">October 19, 2020 - Kumbhabhishekam</h3>
-                  <p className="text-gray-700">
-                    The temple celebrated its grand Kumbhabhishekam (consecration ceremony), marking the completion of the reconstruction 
-                    and the divine installation of all deities in their new sanctums.
+                    The temple regularly uploads videos of daily poojas, alankaras, special poojas, abhishekas, and annaprasadham 
+                    on YouTube and other social media platforms to connect with devotees worldwide.
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-6">
-              <h3 className="text-xl font-semibold mb-4">Spiritual Leadership</h3>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="font-semibold text-lg mb-2">Sri Madhukar Guruji</h4>
-                <p className="text-gray-700">
-                  Sri Madhukar Guruji serves as the spiritual leader (Sarathi) of the temple, guiding devotees in their spiritual journey 
-                  and overseeing all religious ceremonies and rituals.
-                </p>
+              <h3 className="text-xl font-semibold mb-4">Temple Features</h3>
+              <div className="grid gap-4">
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h4 className="font-semibold mb-2">Daily Videos</h4>
+                  <p className="text-gray-700 text-sm">
+                    The temple regularly shares videos of daily poojas, alankaras, and special events on social media.
+                  </p>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h4 className="font-semibold mb-2">Community Engagement</h4>
+                  <p className="text-gray-700 text-sm">
+                    Active presence on Instagram, Facebook, and YouTube to connect with devotees worldwide.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -193,23 +207,17 @@ export default function KarumariTemplePage() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="border rounded-lg p-4">
                   <h3 className="font-semibold text-lg mb-2 text-sankalpa-primary">Main Deity</h3>
-                  <h4 className="font-semibold">Goddess Karumari Amman</h4>
+                  <h4 className="font-semibold">Sri Devi Karumariamma</h4>
                   <p className="text-gray-700 text-sm mt-1">
-                    The presiding deity of the temple, Goddess Karumari Amman is worshipped as the divine mother who protects her devotees.
+                    The presiding deity of the temple, Sri Devi Karumariamma is worshipped as the divine mother who protects her devotees.
                   </p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-semibold text-lg mb-2 text-sankalpa-primary">Other Deities</h3>
-                  <ul className="space-y-1 text-gray-700">
-                    <li>• Lord Ganesha - Remover of obstacles</li>
-                    <li>• Lord Shiva - The destroyer and transformer</li>
-                    <li>• Lord Murugan - God of war and victory</li>
-                    <li>• Lord Mahavishnu - The preserver</li>
-                    <li>• Lord Ayyappan - Lord of growth</li>
-                    <li>• Lord Anjaneya - Devotee of Rama</li>
-                    <li>• Lord Bhairava - Fierce form of Shiva</li>
-                    <li>• Navagrahas - Nine planetary deities</li>
-                  </ul>
+                  <h3 className="font-semibold text-lg mb-2 text-sankalpa-primary">Temple Worship</h3>
+                  <p className="text-gray-700 text-sm">
+                    The temple is dedicated to the worship of Sri Devi Karumariamma with regular poojas, 
+                    abhishekas, and special rituals conducted for the benefit of devotees.
+                  </p>
                 </div>
               </div>
             </div>
@@ -248,7 +256,7 @@ export default function KarumariTemplePage() {
               </div>
               <div className="mt-6 p-4 bg-sankalpa-secondary/10 rounded-lg">
                 <p className="text-sankalpa-primary font-semibold">
-                  Special Service: Rahu Kaala Pooja every Tuesday
+                  Contact the temple for booking special poojas and services
                 </p>
               </div>
             </div>
@@ -258,17 +266,20 @@ export default function KarumariTemplePage() {
         {activeTab === 'events' && (
           <div className="space-y-6">
             <div className="bg-white rounded-lg shadow-sm p-6">
-              <h2 className="text-2xl font-bold mb-4 text-sankalpa-primary">Upcoming Events</h2>
+              <h2 className="text-2xl font-bold mb-4 text-sankalpa-primary">Temple Activities</h2>
               <div className="space-y-4">
                 <div className="border rounded-lg p-4">
                   <div className="flex items-center gap-2 mb-2">
                     <Calendar className="h-5 w-5 text-sankalpa-primary" />
-                    <h3 className="font-semibold">Chariot Construction Project</h3>
+                    <h3 className="font-semibold">Latest Temple Videos</h3>
                   </div>
                   <p className="text-gray-700 text-sm">
-                    The temple is planning to construct a traditional chariot (Ther) for festival processions.
+                    The temple regularly uploads videos of daily poojas, alankaras, and special events. 
+                    Follow their YouTube channel for the latest updates.
                   </p>
-                  <p className="text-sm text-sankalpa-primary mt-2">Status: Planning Phase</p>
+                  <a href="https://www.youtube.com/@srisheethalakrishnamaarite3584" target="_blank" rel="noopener noreferrer" className="text-sm text-sankalpa-primary mt-2 inline-block hover:underline">
+                    Watch on YouTube →
+                  </a>
                 </div>
               </div>
             </div>
@@ -282,7 +293,7 @@ export default function KarumariTemplePage() {
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-sankalpa-primary rounded-full"></div>
-                  <span>Weekly Rahu Kaala Pooja (Tuesdays)</span>
+                  <span>Special Abhishekas and Alankaras</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-sankalpa-primary rounded-full"></div>
