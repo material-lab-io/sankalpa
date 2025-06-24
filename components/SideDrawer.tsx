@@ -11,11 +11,11 @@ interface SideDrawerProps {
 }
 
 const menuItems = [
-  { href: '/', label: 'Home', tamilName: 'முகப்பு', icon: Home },
-  { href: '/temples', label: 'Temples', tamilName: 'கோவில்கள்', icon: Building },
-  { href: '/services', label: 'Services', tamilName: 'சேவைகள்', icon: Flower2 },
-  { href: '/chat', label: 'Divine Chat', tamilName: 'தெய்வீக உரை', icon: MessageCircle },
-  { href: '/profile', label: 'Profile', tamilName: 'விவரம்', icon: User },
+  { href: '/', label: 'Home', icon: Home },
+  { href: '/temples', label: 'Temples', icon: Building },
+  { href: '/services', label: 'Services', icon: Flower2 },
+  { href: '/chat', label: 'Divine Chat', icon: MessageCircle },
+  { href: '/profile', label: 'Profile', icon: User },
 ]
 
 export default function SideDrawer({ isOpen, onClose, userName = 'Devotee' }: SideDrawerProps) {
@@ -49,9 +49,9 @@ export default function SideDrawer({ isOpen, onClose, userName = 'Devotee' }: Si
                 {userName.charAt(0).toUpperCase()}
               </span>
             </div>
-            <h3 className="font-serif text-xl text-sankalpa-dark">வணக்கம், {userName}</h3>
+            <h3 className="font-serif text-xl text-sankalpa-dark">Welcome, {userName}</h3>
             <p className="text-sm text-sankalpa-dark/70 mt-1 italic">
-              Vanakkam • ನಮಸ್ಕಾರ • నమస్కారం
+              Your spiritual journey awaits
             </p>
           </div>
         </div>
@@ -68,7 +68,6 @@ export default function SideDrawer({ isOpen, onClose, userName = 'Devotee' }: Si
               <item.icon className="h-5 w-5 text-sankalpa-gold group-hover:text-sankalpa-gold-dark" />
               <div className="flex-1">
                 <p className="text-sankalpa-dark font-medium">{item.label}</p>
-                <p className="text-xs text-sankalpa-dark/60">{item.tamilName}</p>
               </div>
             </Link>
           ))}

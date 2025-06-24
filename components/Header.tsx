@@ -13,8 +13,7 @@ export default function Header() {
       <header className="fixed top-0 left-0 right-0 bg-sankalpa-cream-light/95 backdrop-blur-sm shadow-sm z-30">
         <nav className="container mx-auto px-4 h-14 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-serif text-sankalpa-gold">சங்கல்ப</span>
-            <span className="text-lg font-serif text-sankalpa-dark hidden sm:inline">Sankalpa</span>
+            <span className="text-2xl font-serif text-sankalpa-gold">Sankalpa</span>
           </Link>
           
           <div className="hidden md:flex items-center space-x-6">

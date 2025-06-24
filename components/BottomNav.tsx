@@ -5,11 +5,11 @@ import { usePathname } from 'next/navigation'
 import { Home, Building, Flower2, MessageCircle, User } from 'lucide-react'
 
 const navItems = [
-  { href: '/', icon: Home, label: 'Home', tamil: 'முகப்பு' },
-  { href: '/temples', icon: Building, label: 'Temples', tamil: 'கோவில்' },
-  { href: '/services', icon: Flower2, label: 'Services', tamil: 'சேவை' },
-  { href: '/chat', icon: MessageCircle, label: 'Chat', tamil: 'உரை' },
-  { href: '/profile', icon: User, label: 'Profile', tamil: 'விவரம்' },
+  { href: '/', icon: Home, label: 'Home' },
+  { href: '/temples', icon: Building, label: 'Temples' },
+  { href: '/services', icon: Flower2, label: 'Services' },
+  { href: '/chat', icon: MessageCircle, label: 'Chat' },
+  { href: '/profile', icon: User, label: 'Profile' },
 ]
 
 export default function BottomNav() {
@@ -26,8 +26,8 @@ export default function BottomNav() {
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-sankalpa-cream-light/95 backdrop-blur-sm border-t border-sankalpa-gold/20 px-2 pb-safe z-50 md:hidden shadow-lg">
-      <div className="flex justify-around items-center h-16">
-        {navItems.map(({ href, icon: Icon, label, tamil }) => {
+      <div className="flex justify-around items-center h-14">
+        {navItems.map(({ href, icon: Icon, label }) => {
           const active = isActive(href)
           return (
             <Link
@@ -45,7 +45,6 @@ export default function BottomNav() {
                 strokeWidth={active ? 2.5 : 2}
               />
               <span className="text-[10px] font-medium">{label}</span>
-              {active && <span className="text-[8px] text-sankalpa-gold/70">{tamil}</span>}
             </Link>
           )
         })}

@@ -68,16 +68,13 @@ export default function Home() {
         <div className="relative z-10 h-full flex flex-col justify-center px-4 max-w-4xl mx-auto">
           <div className="text-center">
             <p className="text-sm text-sankalpa-dark/70 mb-1">
-              {new Date().getHours() < 12 ? 'ಶುಭೋದಯ • శుభోదయం • காலை வணக்கம்' : new Date().getHours() < 17 ? 'Good Afternoon' : 'ಶುಭ ಸಾಯಂಕಾಲ • శుభ సాయంత్రం • மாலை வணக்கம்'}
+              {new Date().getHours() < 12 ? 'Good Morning' : new Date().getHours() < 17 ? 'Good Afternoon' : 'Good Evening'}
             </p>
             <h1 className="text-3xl font-serif text-sankalpa-dark mb-2">
               Welcome back, <span className="text-sankalpa-gold">Devotee</span>
             </h1>
             <p className="text-sankalpa-dark/80 text-sm mb-1 italic">
-              எல்லா உயிர்களும் இன்புற்று வாழ்க
-            </p>
-            <p className="text-xs text-sankalpa-dark/60">
-              Ella uyirgalum inbutru vaazhga • May all beings live happily
+              May peace and prosperity be with you
             </p>
           </div>
           
@@ -110,8 +107,11 @@ export default function Home() {
               FEATURED
             </div>
             <div className="flex items-center gap-4">
-              <div className="w-20 h-20 bg-gradient-to-br from-sankalpa-gold to-sankalpa-gold-dark rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-                <span className="font-serif">ಕರು</span>
+              <div className="w-20 h-20 bg-gradient-to-br from-sankalpa-gold to-sankalpa-gold-dark rounded-full flex items-center justify-center text-white shadow-lg">
+                <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M12 2L3 7V11C3 16 6.5 20.7 12 22C17.5 20.7 21 16 21 11V7L12 2Z" />
+                  <path d="M12 6L8 8.5V10.5C8 13 9.5 15.3 12 16C14.5 15.3 16 13 16 10.5V8.5L12 6Z" />
+                </svg>
               </div>
               <div className="flex-1">
                 <h3 className="font-serif text-xl text-sankalpa-dark">Sri Devi Karumariamma Temple</h3>
@@ -130,18 +130,17 @@ export default function Home() {
       <section className="px-4 mt-8">
         <div className="grid grid-cols-4 gap-3">
           {[
-            { icon: '🛕', label: 'Temples', tamil: 'கோவில்' },
-            { icon: '🪔', label: 'Poojas', tamil: 'பூஜை' },
-            { icon: '🎊', label: 'Events', tamil: 'விழா' },
-            { icon: '🙏', label: 'Donate', tamil: 'காணிக்கை' },
+            { icon: '🛕', label: 'Temples' },
+            { icon: '🪔', label: 'Poojas' },
+            { icon: '🎊', label: 'Events' },
+            { icon: '🙏', label: 'Donate' },
           ].map((item) => (
             <button
               key={item.label}
               className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md active:scale-95 transition-all border border-sankalpa-gold/10 group"
             >
               <div className="text-2xl mb-1 group-hover:animate-float">{item.icon}</div>
-              <span className="text-xs text-sankalpa-dark font-medium block">{item.label}</span>
-              <span className="text-[10px] text-sankalpa-dark/60">{item.tamil}</span>
+              <span className="text-xs text-sankalpa-dark font-medium">{item.label}</span>
             </button>
           ))}
         </div>

@@ -80,14 +80,8 @@ export default function KarumariTemplePage() {
                 The temple is dedicated to Goddess Karumariamma and serves as a spiritual center for devotees in Bengaluru and surrounding areas.
               </p>
               <div className="bg-sankalpa-secondary/10 p-4 rounded-lg mb-4">
-                <p className="text-sankalpa-primary font-semibold text-center text-lg">
-                  &ldquo;ಕರುಮಾರಿ ತಾಯಿ ಕಾಪಾಡುತ್ತಾಳೆ&rdquo;
-                </p>
-                <p className="text-center text-sankalpa-dark/70 text-sm mt-2">
-                  ಕನ್ನಡ • தமிழ் • తెలుగు
-                </p>
-                <p className="text-center text-gray-600 mt-1 text-sm">
-                  &ldquo;Mother Karumari protects us&rdquo;
+                <p className="text-sankalpa-primary font-semibold text-center text-lg italic">
+                  &ldquo;Where devotion meets divine grace&rdquo;
                 </p>
               </div>
             </div>
