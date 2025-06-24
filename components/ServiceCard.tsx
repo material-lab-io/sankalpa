@@ -10,10 +10,10 @@ interface ServiceCardProps {
 }
 
 const typeColors = {
-  pooja: 'bg-purple-100 text-purple-700',
-  hall: 'bg-blue-100 text-blue-700',
-  homa: 'bg-orange-100 text-orange-700',
-  prasad: 'bg-green-100 text-green-700',
+  pooja: 'bg-sankalpa-gold/10 text-sankalpa-gold-dark',
+  hall: 'bg-sankalpa-green/10 text-sankalpa-green-dark',
+  homa: 'bg-sankalpa-secondary/10 text-sankalpa-secondary',
+  prasad: 'bg-sankalpa-cream text-sankalpa-dark',
 }
 
 const typeIcons = {
@@ -32,14 +32,14 @@ export default function ServiceCard({
   available = true
 }: ServiceCardProps) {
   return (
-    <div className={`bg-white rounded-xl p-4 card-shadow transition-all duration-300 ${
-      available ? 'card-shadow-hover cursor-pointer' : 'opacity-60'
+    <div className={`bg-white rounded-2xl p-5 shadow-sm hover:shadow-lg transition-all duration-300 border border-sankalpa-gold/10 ${
+      available ? 'cursor-pointer' : 'opacity-60'
     }`}>
       <div className="flex items-start justify-between mb-3">
         <div className="flex items-center">
           <span className="text-2xl mr-3">{typeIcons[type]}</span>
           <div>
-            <h3 className="font-semibold text-gray-900">{title}</h3>
+            <h3 className="font-serif text-lg text-sankalpa-dark">{title}</h3>
             <span className={`inline-block text-xs font-medium px-2 py-1 rounded-full mt-1 ${typeColors[type]}`}>
               {type.charAt(0).toUpperCase() + type.slice(1)}
             </span>
@@ -47,24 +47,24 @@ export default function ServiceCard({
         </div>
       </div>
       
-      <p className="text-sm text-gray-600 mb-3 line-clamp-2">{description}</p>
+      <p className="text-sm text-sankalpa-dark/70 mb-3 line-clamp-2">{description}</p>
       
       <div className="flex items-center justify-between">
-        <div className="flex items-center text-sm text-gray-500">
+        <div className="flex items-center text-sm text-sankalpa-dark/60">
           <Clock size={14} className="mr-1" />
           <span>{duration}</span>
         </div>
         
         <div className="text-right">
-          <p className="text-lg font-bold text-sankalpa-primary">₹{price}</p>
+          <p className="text-lg font-bold text-sankalpa-gold">₹{price}</p>
           {!available && (
-            <span className="text-xs text-gray-500">Not available</span>
+            <span className="text-xs text-sankalpa-dark/50">Not available</span>
           )}
         </div>
       </div>
       
       {available && (
-        <button className="w-full mt-3 bg-sankalpa-primary text-white py-2 rounded-lg font-medium text-sm hover:bg-sankalpa-secondary transition-colors">
+        <button className="w-full mt-3 bg-gradient-to-r from-sankalpa-gold to-sankalpa-gold-dark text-white py-2.5 rounded-full font-medium text-sm hover:shadow-md transition-all transform hover:scale-105">
           Book Now
         </button>
       )}

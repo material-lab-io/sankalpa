@@ -1,10 +1,18 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import BottomNav from '@/components/BottomNav'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
+
+const playfair = Playfair_Display({ 
+  subsets: ['latin'],
+  variable: '--font-playfair',
+})
 
 export const metadata: Metadata = {
   title: 'Sankalpa - Connect with Temples',
@@ -24,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-sankalpa-bg`}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans bg-sankalpa-bg`}>
         <Header />
         <main className="pt-14 pb-20 md:pb-0 min-h-screen">
           {children}
